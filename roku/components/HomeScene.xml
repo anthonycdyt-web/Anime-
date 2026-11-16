@@ -4,10 +4,16 @@
     <field id="apiBase" type="string" value="https://reanime-api-8923.onrender.com" />
   </interface>
   <children>
-    <Label id="heading" text="ReAnime" translation="[80,45]" width="1000" height="70" />
-    <Label id="status" text="Loading anime..." translation="[80,115]" width="1100" height="50" />
-    <PosterGrid id="animeGrid" translation="[80,180]" width="1120" height="440" numRows="2" itemSize="[190,270]" />
-    <Label id="help" text="Select an anime to view details  •  Back to exit" translation="[80,650]" width="1100" height="40" />
+    <Label id="heading" text="ReAnime" translation="[70,25]" width="1100" height="65" />
+    <Button id="searchButton" text="Search anime" translation="[70,95]" />
+    <Label id="status" text="Loading anime..." translation="[330,105]" width="850" height="45" />
+    <PosterGrid id="animeGrid" translation="[70,165]" width="1120" height="440" numRows="2" itemSize="[190,270]" />
+    <Label id="detailTitle" text="" translation="[70,165]" width="1050" height="55" visible="false" />
+    <Label id="detailText" text="" translation="[70,220]" width="1050" height="90" numLines="3" visible="false" />
+    <Label id="episodeHeading" text="Episodes" translation="[70,325]" width="400" height="45" visible="false" />
+    <LabelList id="episodeList" translation="[70,370]" itemSize="[1000,48]" numRows="5" visible="false" />
+    <Video id="video" translation="[70,160]" width="1120" height="510" visible="false" />
+    <Label id="help" text="OK: open • Search: find anime • Back: go back" translation="[70,650]" width="1100" height="40" />
   </children>
   <script type="text/brightscript" uri="HomeScene.brs" />
   <script type="text/brightscript" uri="pkg:/source/api.brs" />
