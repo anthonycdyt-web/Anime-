@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: reanime-api
+    runtime: docker
+    rootDir: api
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    plan: free
+    autoDeploy: true
