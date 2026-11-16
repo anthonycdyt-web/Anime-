@@ -202,13 +202,14 @@ end sub
 sub onSearch()
     keyboard = CreateObject("roSGNode", "Keyboard")
     keyboard.title = "Search anime"
-    keyboard.observeField("text", "onSearchText")
+    keyboard.observeField("buttonSelected", "onSearchSubmitted")
     m.searchKeyboard = keyboard
     m.top.dialog = keyboard
 end sub
 
-sub onSearchText(event as Object)
-    query = event.getData()
+sub onSearchSubmitted()
+    query = m.searchKeyboard.text
+    m.top.dialog = invalid
     if query = invalid or query = "" then return
     m.status.text = "Searching for " + query + "..."
     requestUrl(m.apiBase + "/search?q=" + encodeURIComponent(query) + "&limit=30", "search")
