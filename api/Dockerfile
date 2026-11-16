@@ -15,7 +15,7 @@ WORKDIR /app
 RUN git clone --depth 1 https://github.com/walterwhite-69/ReAnime.to-API.git /app/upstream
 
 WORKDIR /app/upstream
-RUN pip install --no-cache-dir fastapi uvicorn "httpx[http2]" pycryptodome
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 CMD ["sh", "-c", "uvicorn reanime:app --host 0.0.0.0 --port ${PORT:-8000}"]
