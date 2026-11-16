@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeScene" extends="Scene">
+  <interface>
+    <field id="apiBase" type="string" value="https://reanime-api-8923.onrender.com" />
+  </interface>
+  <children>
+    <Label id="heading" text="ReAnime" translation="[80,45]" width="1000" height="70" />
+    <Label id="status" text="Loading anime..." translation="[80,115]" width="1100" height="50" />
+    <PosterGrid id="animeGrid" translation="[80,180]" width="1120" height="440" numRows="2" itemSize="[190,270]" />
+    <Label id="help" text="Select an anime to view details  •  Back to exit" translation="[80,650]" width="1100" height="40" />
+  </children>
+  <script type="text/brightscript" uri="HomeScene.brs" />
+  <script type="text/brightscript" uri="pkg:/source/api.brs" />
+</component>
